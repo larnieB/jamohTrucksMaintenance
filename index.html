@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction | Jamo Trucks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand-orange: #F28C28;
+            --rich-black: #1a1a1a;
+            --text-gray: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--rich-black);
+            color: #ffffff;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        /* Background Accent */
+        .bg-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            background: var(--brand-orange);
+            filter: blur(150px);
+            opacity: 0.15;
+            z-index: 1;
+            border-radius: 50%;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: var(--brand-orange);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: rgba(242, 140, 40, 0.1);
+            color: var(--brand-orange);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border: 1px solid var(--brand-orange);
+        }
+
+        .notify-box {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        input[type="email"] {
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background: #252525;
+            color: white;
+            width: 250px;
+            outline: none;
+        }
+
+        button {
+            padding: 15px 30px;
+            background: var(--brand-orange);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 40px;
+            width: 100%;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2rem; }
+            .notify-box { flex-direction: column; align-items: center; }
+            input[type="email"] { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <div class="container">
+        <div class="status-badge">Engine Warming Up</div>
+        <div class="logo">JAMO<span>TRUCKS</span></div>
+        <h1>Our new showroom is coming soon.</h1>
+        <p>Kenya's leading truck marketplace is undergoing a scheduled upgrade. We're tuning our engines to bring you a better experience.</p>
+
+        <form class="notify-box" onsubmit="event.preventDefault(); alert('We will notify you!');">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Notify Me</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 Jamo Trucks. All rights reserved.
+    </div>
+
+</body>
+</html>
